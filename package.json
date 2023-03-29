@@ -1,9 +1,8 @@
 {
     "name": "test-release-please",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Testing",
-    "dependencies": {
-    },
+    "dependencies": {},
     "main": "index",
     "engines": {
         "node": ">= 0.4.1"
