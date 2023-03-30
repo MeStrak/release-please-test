@@ -6,6 +6,3 @@ with:
   body: "My pull request body"
   branch: "env/test"
   commit-message: "xxxxx"
-  author: "Lorem J. Ipsum <lorem@example.com>"
-  team_reviewers: team1, team2
-  update-pull-request-title-and-body: true
