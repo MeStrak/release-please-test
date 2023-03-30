@@ -16,4 +16,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           title: "auto pr to test"
-          branch: "env/test"
