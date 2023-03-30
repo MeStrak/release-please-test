@@ -1,0 +1,11 @@
+uses: gr2m/create-or-update-pull-request-action@v1
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+with:
+  title: "Merge to env/test"
+  body: "My pull request body"
+  branch: "my-pull-request-base-branch"
+  commit-message: "xxxxx"
+  author: "Lorem J. Ipsum <lorem@example.com>"
+  team_reviewers: team1, team2
+  update-pull-request-title-and-body: true
