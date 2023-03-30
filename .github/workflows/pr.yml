@@ -27,7 +27,7 @@ jobs:
       - name: Run a one-line script
         id: get-date
         run: |
-          current_date="$(date +'%Y-%m-%d')"
+          current_date="$(date +'%Y-%m-%d %H:%M:%S')"
           echo "current_date=$current_date" >> $GITHUB_OUTPUT
         
       - name: Comment PR with org login details
