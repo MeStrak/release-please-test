@@ -25,16 +25,16 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
+        id: get-date
         run: |
-          current_date="$(date +'%Y-%m-%d %H:%M')"
-          echo "$current_date" >> $GITHUB_OUTPUT
+          current_date="$(date +'%Y-%m-%d %H:%M:%S')"
+          echo "current_date=$current_date" >> $GITHUB_OUTPUT
         
       - name: Comment PR with org login details
-        id: pr-cmt
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            CI execution complete ${{ steps.pr-cmt.outputs.current_date }}.
+            CI execution complete ${{ steps.get-date.outputs.current_date }}.
             
           comment_tag: pr-comment
           reactions: rocket
