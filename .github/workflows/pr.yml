@@ -27,7 +27,7 @@ jobs:
       - name: Run a one-line script
         run: |
           current_date="$(date +'%Y-%m-%d')"
-          echo "$current_date" >> $GITHUB_OUTPUT
+          echo "current_date=$current_date" >> $GITHUB_OUTPUT
         
       - name: Comment PR with org login details
         id: pr-cmt
