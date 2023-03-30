@@ -1,16 +1,19 @@
+name: Nightly update
 on:
   push:
     branches:
       - main
 
-permissions:
-  contents: write
-  pull-requests: write
-uses: gr2m/create-or-update-pull-request-action@v1
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-with:
-  title: "Merge to env/test"
-  body: "My pull request body"
-  branch: "env/test"
-  commit-message: "xxxxx"
+jobs:
+  update_routes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: gr2m/create-or-update-pull-request-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          title: "auto pr to test"
+          branch: "env/test"
