@@ -1,4 +1,4 @@
-name: Nightly update
+name: auto pr
 on:
   push:
     branches:
