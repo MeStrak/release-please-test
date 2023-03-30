@@ -26,7 +26,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          current_date="$(date +'%Y-%m-%d-%H:%M')"
+          current_date="$(date +'%Y-%m-%d %H:%M')"
           echo "$current_date" >> $GITHUB_OUTPUT
         
       - name: Comment PR with org login details
