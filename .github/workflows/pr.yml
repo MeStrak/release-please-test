@@ -34,7 +34,7 @@ jobs:
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            CI execution complete ${{ steps.pr-cmt.outputs.get-date }}.
+            CI execution complete ${{ steps.get-date.outputs.get-date }}.
             
           comment_tag: pr-comment
           reactions: rocket
